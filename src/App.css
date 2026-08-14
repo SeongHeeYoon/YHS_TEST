@@ -1,0 +1,125 @@
+.screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+}
+
+.screen h1 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  margin: 0;
+}
+
+.screen.idle,
+.screen.waiting {
+  background-color: #1d4ed8;
+  cursor: pointer;
+}
+
+.screen.ready {
+  background-color: #dc2626;
+  cursor: pointer;
+}
+
+.screen.fail {
+  background-color: #1f2937;
+  cursor: pointer;
+}
+
+.screen.result {
+  background-color: #16a34a;
+}
+
+.nickname-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nickname-form input {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  min-width: 200px;
+}
+
+.nickname-form button,
+.restart-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #ffffff;
+  color: #16a34a;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.screen.fail .restart-button {
+  color: #1f2937;
+}
+
+.nickname-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.saved-message {
+  font-weight: 700;
+}
+
+.error-message {
+  color: #fecaca;
+  font-weight: 600;
+}
+
+.ranking {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  min-width: 260px;
+}
+
+.ranking h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.ranking ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.ranking li {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.ranking .rank {
+  font-weight: 700;
+  width: 1.5rem;
+}
+
+.ranking .nickname {
+  flex: 1;
+  text-align: left;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
