@@ -82,7 +82,8 @@ GitHub Pages 배포 워크플로우(`.github/workflows/deploy.yml`)가 빌드 �
 
 1. 저장소 → Settings → Pages
 2. "Build and deployment" → Source를 **GitHub Actions**로 선택
-3. `main` 브랜치에 push하면 `.github/workflows/deploy.yml`이 자동으로 빌드/배포
+3. `claude/reaction-time-webapp-4b5zlt` 브랜치(현재 저장소 기본 브랜치)에 push하면
+   `.github/workflows/deploy.yml`이 자동으로 빌드/배포
    (직접 실행하려면 Actions 탭에서 "Deploy to GitHub Pages" 워크플로우를 수동 실행)
 
 배포 후 주소는 `https://<GitHub 계정>.github.io/<저장소 이름>/` 형태입니다.
